@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robot Quiz Simulator - Three Questions with Obstacle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container" role="main" aria-label="Robot Quiz Simulator">
+    <div id="feedback" aria-live="polite" aria-atomic="true"></div>
+    <header class="question-bar" id="question-text"></header>
+    <main class="main-area">
+      <section class="code-section" aria-label="Code snippet for the question">
+        <pre><code id="question-code"></code></pre>
+      </section>
+      <section class="simulation" aria-label="Robot simulation area">
+        <div id="simulation-area">
+          <div id="robot-car" aria-label="Robot visualization" role="img" tabindex="0">
+            <img src="media/robot.png" alt="Top view of robot" class="robot-image">
+          </div>
+          <img id="obstacle-wall" src="media/wall.png" alt="Obstacle Wall" class="wall-image" style="display:none;" aria-hidden="true">
+          <img id="wall-front" src="media/wall.png" alt="Front Wall" class="wall-image" style="display:none;" aria-hidden="true">
+          <img id="wall-left" src="media/wall.png" alt="Left Wall" class="wall-image" style="display:none;" aria-hidden="true">
+          <img id="wall-right" src="media/wall.png" alt="Right Wall" class="wall-image" style="display:none;" aria-hidden="true">
+          <img id="blast-effect" src="media/fire-5518_256.gif" alt="Blast Effect" />
+          <img id="rf-remote-img" src="media/rf_remote.png" alt="RF Remote" class="rf-remote" style="display:none;">
+          <img id="line-center" src="media/black_line.png" alt="Black Line">
+          <div class="start-label" aria-hidden="true">Start Area (Center)</div>
+        </div>
+      </section>
+      <aside class="options" id="options" aria-label="Answer options">
+        <div class="actions">
+          <button id="resetBtn" class="secondary" aria-label="Reset question">Reset</button>
+          <button id="nextBtn" class="secondary" aria-label="Next question" disabled>Next</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script> 
+</body>
+</html>
