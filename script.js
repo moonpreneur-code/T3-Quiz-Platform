@@ -14,13 +14,13 @@ const questions = [
     {
     question: "If we want the robot to turn RIGHT, which of the following function calls should we use?",
     code: `void control_robot(int in1, int in2, int in3, int in4, int mspeed) {
-    analogWrite(EN1, mspeed);
-    analogWrite(EN2, mspeed);
+    analogWrite(EN1, mspeed); // Speed of Motor 1
+    analogWrite(EN2, mspeed); // Speed of Motor 2
 
-    digitalWrite(IN1, in1);
-    digitalWrite(IN2, in2);
-    digitalWrite(IN3, in3);
-    digitalWrite(IN4, in4);
+    digitalWrite(IN1, in1);  // Motor 1 direction
+    digitalWrite(IN2, in2);  // Motor 1 direction
+    digitalWrite(IN3, in3);  // Motor 2 direction
+    digitalWrite(IN4, in4);  // Motor 2 direction
 }`,
     options: [
         { text: "control_robot(1, 0, 1, 0, 128)", value: "A" },
@@ -554,3 +554,4 @@ function moveForwardCrossblack() {
     robot.style.transition = 'transform 2s ease';
     robot.style.transform = "translateY(-280px)";
 }
+
