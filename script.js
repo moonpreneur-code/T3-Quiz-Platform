@@ -41,11 +41,13 @@ const questions = [
     {
     question: "The robot uses two limit switches (LS1 and LS2) to detect obstacles. Which condition should we add to the code so that the robot stops and moves backward in the shown scenario? ",
     code:`void loop() {
-  digitalWrite(M1P, HIGH);
-  digitalWrite(M1N, LOW);
-  digitalWrite(M2P, HIGH);
-  digitalWrite(M2N, LOW);
+  // Move forward (Motor 1 & Motor 2)
+  digitalWrite(M1P, HIGH); // Motor 1 direction
+  digitalWrite(M1N, LOW);  // Motor 1 direction
+  digitalWrite(M2P, HIGH); // Motor 2 direction
+  digitalWrite(M2N, LOW);  // Motor 2 direction
 
+  // Read sensor values
   int s1 = digitalRead(LS1);
   int s2 = digitalRead(LS2);
 
@@ -554,4 +556,5 @@ function moveForwardCrossblack() {
     robot.style.transition = 'transform 2s ease';
     robot.style.transform = "translateY(-280px)";
 }
+
 
